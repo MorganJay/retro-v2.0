@@ -147,18 +147,25 @@
 }
 
 @media screen and (min-width: 800px) {
+  .heading {
+  font-size: 64px;
+}
+
 .list {
     display: flex;
-    justify-content: space-between;
+  justify-content: space-around;
   flex-wrap: wrap;
   overflow: hidden;
   max-height: 350px;
+  align-items: center;
+   transition: height 1s ease-in;
 }
 
 .openStories{
     margin-bottom: 2rem;
-    max-height: 1200px;
-    overflow: visible,;
+    max-height: fit-content;
+    overflow: visible;
+    transition: all 1s;
   }
 
 .listItem{
@@ -177,6 +184,7 @@
   width: 300px;
   height: 300px;
   cursor: pointer;
+  z-index: 2;
   /* background-image: url(/images/happy.png); */
 }
 
@@ -188,27 +196,17 @@
 
 .storyImage{
   filter: grayscale(100%);
+  opacity: 0.5;
 }
 
 .storyImage:hover{
   filter: none;
+  opacity: 1;
 }
-
-/* .storyImage::before{
-  content: "";
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0.11) 0%, #000000 94.79% );
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  pointer-events: none;
-} */
-
-/* .storyImage:hover::before{
-  display: none;
-} */
 
 .storyInfo{
   width: 220px;
+  z-index: 0;
   }
 
 .viewStories{
@@ -219,6 +217,14 @@
   padding-top: 30px;
 }
 
+.list {
+    justify-content: space-between;
+}
+
+/* .listItem{
+  flex: 0 0 10%;
+} */
+
 }
 
 @media screen and (min-width: 1440px) {
@@ -226,7 +232,6 @@
     width: 351px;
   height: 344px;
 }
-
 
 .title{
   width: 100%;
@@ -241,4 +246,18 @@
 .buttonContainer{
   margin-top: 7rem;
 }
+
+.list {
+    justify-content: space-evenly;
+}
+
+.listItem{
+  flex: 0 0 26%;
+}
+
+.openStories{
+    margin-bottom: 2rem;
+    max-height: 1200px;
+    overflow: visible,;
+  }
 }

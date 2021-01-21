@@ -18,7 +18,7 @@ export async function getStaticProps() {
 function handleClick(e) {
   e.preventDefault();
   const storiesList = document.getElementById("js-list");
-  storiesList.classList.add("openStories");
+  storiesList.classList.add(`${utilStyles.openStories}`);
   e.target.style.display = "none";
 }
 
