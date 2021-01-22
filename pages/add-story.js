@@ -3,8 +3,8 @@ import Link from 'next/link'
 import { useState } from 'react';
 import Example from '../components/modal';
 import Layout, { siteTitle } from '../components/layout'
-import Terms from './terms';
-import addStoryStyles from './add-story.module.css'
+import Terms from './terms'
+import Styles from './add-story.module.css'
 
 function goFurther() {
     if (document.getElementById("checkbox").checked == true)
@@ -37,7 +37,7 @@ const Add = () => {
     const handleChange = (e) => {
         setContact({ ...contact, [e.target.name]: e.target.value });
     }
-
+    
     const handleSubmit = async e => {
         e.preventDefault();
         try {
@@ -67,31 +67,29 @@ const Add = () => {
             <Head>
                 <title>{siteTitle}</title>
             </Head>
-            <div className={addStoryStyles.columnContent}>
-                <h2 className={addStoryStyles.heading}>Hi there, share with the world your 2020 Year in Review 😊</h2>
+            <div className={Styles.columnContent}>
+                <h2 className={Styles.heading}>Hi there, share with the world your 2020 Year in Review 😊</h2>
                 <form
                     action='https://api.staticforms.xyz/submit'
                     method='post'
                     onSubmit={handleSubmit}
                 >
-                    <div className='field'>
-                        <label className='label'>Please enter your story below</label>
-                        <div className='control'>
-                            <input
-                                className='input storyInput'
+                     <div className={Styles.field}>
+                        <label className={Styles.label}>Please enter your story below</label>
+                            <textarea
+                                className={`${Styles.input} ${Styles.storyInput}`}
                                 type='text'
-                                name='name'
+                                name='story'
                                 onChange={handleChange}
                                 required
                             />
-                        </div>
                     </div>
 
-                    <div className='field'>
-                        <label className='label'>What's your name?</label>
-                        <div className='control'>
+                    <div className={Styles.field}>
+                        <label className={Styles.label} >What's your name?</label>
+                        <div className={Styles.control}>
                             <input
-                                className='input'
+                                className={Styles.input}
                                 type='text'
                                 placeholder='Name'
                                 name='name'
@@ -100,11 +98,11 @@ const Add = () => {
                             />
                         </div>
                     </div>
-                    <div className='field'>
-                        <label className='label'>Enter your email address</label>
-                        <div className='control'>
+                    <div className={Styles.field}>
+                        <label className={Styles.label}>Enter your email address</label>
+                        <div className={Styles.control}>
                             <input
-                                className='input'
+                                className={Styles.input}
                                 type='email'
                                 placeholder='Email'
                                 name='email'
@@ -113,11 +111,11 @@ const Add = () => {
                             />
                         </div>
                     </div>
-                    <div className='field'>
-                        <label className='label'>Enter your twitter handle</label>
-                        <div className='control'>
+                    <div className={Styles.field}>
+                        <label className={Styles.label}>Enter your twitter handle</label>
+                        <div className={Styles.control}>
                             <input
-                                className='input'
+                                className={Styles.input}
                                 type='url'
                                 placeholder='Twitter URL'
                                 name='twitter'
@@ -126,11 +124,24 @@ const Add = () => {
                             />
                         </div>
                     </div>
-                    <div className='field'>
-                        <label className='label'>Link/URL to your story</label>
-                        <div className='control'>
+                     <div className={`${Styles.field} ${Styles.imageField}`}>               
+                            {/* <input
+                                className={Styles.fileUpload}
+                                type='file'
+                                name='image'
+                                // onChange={handleChange}
+                            /> */}
+                             <p className={Styles.uploadText}>Upload an image for your story
+                            (Max size 2MB)
+                            </p>
+                            <input type="file" className={Styles.upload}/> 
+                    </div>
+
+                    <div className={Styles.field}>
+                        <label className={Styles.label}>Link/URL to your story</label>
+                        <div className={Styles.control}>
                             <input
-                                className='input'
+                                className={Styles.input}
                                 type='url'
                                 placeholder='Story URL'
                                 name='story'
@@ -139,9 +150,9 @@ const Add = () => {
                             />
                         </div>
                     </div>
-                    <div className='field' style={{ display: 'none' }}>
-                        <label className='label'>Title</label>
-                        <div className='control'>
+                    <div className={Styles.field} style={{ display: 'none' }}>
+                        <label className={Styles.label}>Title</label>
+                        <div className={Styles.control}>
                             <input
                                 type='text'
                                 name='honeypot'
@@ -155,15 +166,18 @@ const Add = () => {
                             />
                         </div>
                     </div>
-                    <div className='field is-grouped'>
-                        <div className='control'>
-                            <p className="check">
-                                <input type="checkbox" name="checkbox" id="checkbox" onClick={goFurther} /> I accept the {' '}
+                    <div className={`${Styles.field} ${Styles.isGrouped}`}>
+                        <div className={Styles.control}>
+                            <p className={Styles.check}>
+                                <label className={Styles.checkContainer}>
+                                <input type="checkbox" name="checkbox" id="checkbox" className={Styles.checkbox} onClick={goFurther} /> 
+                                <span class={Styles.mark}></span>
+                                </label>I accept the {' '}
                                 <Link href='/terms'>
-                                    <a style={{ textDecoration: 'underline' }}>Terms and Conditions</a>
-                                </Link> for hosting my story on RetroGram
+                                    <a style={{ textDecoration: 'underline' }}> Terms and Conditions</a>
+                                </Link><br></br> &ensp;for hosting my story on RetroGram.
                             </p>
-                            <button className='button is-primary' id="submit" type='submit' disabled>
+                            <button className={`${Styles.button} ${Styles.isPrimary}`} id="submit" type='submit' disabled>
                                 Submit
                             </button>
                         </div>

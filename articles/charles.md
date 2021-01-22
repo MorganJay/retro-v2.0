@@ -1,10 +1,9 @@
 ---
-title: 'I said NO, and saved lives.'
-image: /images/frame4.png
-twitter: 'https://twitter/jay__jm'
-name: 'kachi_with'
-# share: 'https://twitter.com/intent/tweet?text=Check%20out%20my%20year%20in%20review%20here%20https%3A//retroo.xyz/'
-readMore: 'https://'
+title: 'Love will reveal you, you may not like it.'
+image: /images/charles.png
+twitter: 'https://twitter.com/madebycharles'
+name: 'madebycharles'
+story_link: 'https://onyeepeace.com'
 ---
 
 In her presidential campaign last year, Kamala Harris pitched herself as a history-making candidate who could appeal to both progressives and moderates. Rather than trying to upend the economy, her policies sought incremental, targeted results, particularly focusing on historically marginalized groups like women, people of color and low-income Americans.

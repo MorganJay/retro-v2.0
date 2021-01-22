@@ -1,82 +1,50 @@
 .heading2Xl {
-  font-size: 2.5rem;
-  line-height: 1.2;
-  font-weight: 800;
-  letter-spacing: -0.05rem;
-  margin: 1rem 0;
+    font-size: 2.5rem;
+    line-height: 1.2;
+    font-weight: 800;
+    letter-spacing: -0.05rem;
+    margin: 1rem 0;
 }
 
 .headingXl {
-  font-size: 2rem;
-  line-height: 1.3;
-  font-weight: 800;
-  letter-spacing: -0.05rem;
-  margin: 1rem 0;
+    font-size: 2rem;
+    line-height: 1.3;
+    font-weight: 800;
+    letter-spacing: -0.05rem;
+    margin: 1rem 0;
 }
 
 .headingLg {
-  font-size: 1.5rem;
-  line-height: 1.4;
-  margin: 1rem 0;
+    font-size: 1.5rem;
+    line-height: 1.4;
+    margin: 1rem 0;
 }
 
 .headingMd {
-  font-size: 1.2rem;
-  line-height: 1.5;
-  font-style: normal;
-  color: #ffffff;
+    font-size: 1.2rem;
+    line-height: 1.5;
 }
 
 .borderCircle {
-  border-radius: 9999px;
+    border-radius: 9999px;
 }
 
 .colorInherit {
-  color: inherit;
+    color: inherit;
 }
 
-.heading {
-  font-size: 64px;
-  font-weight: 400;
-  font-family: Canela;
-}
-
-.padding {
-  padding-top: 2px;
+.padding1px {
+    padding-top: 1px;
 }
 
 .list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  animation-name: bounceIn;
-  animation-duration: 1s;
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
-.listItem{
-  margin: 0 0 1.25rem;
-  position: relative;
-}
-
-.storyInfo{
-    position: absolute;
-    bottom: 10%;
-    left: 10%;
-    width: 200px;
-    height: 91px;
-    font-family: Canela;
-    filter: none;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-  }
-
-.storyAuthor{
-      font-family: TTNormsPro;
-      font-weight: 400;
-      font-size: 16px;
-      justify-self: flex-end;
+.listItem {
+    margin: 0 0 1.25rem;
 }
 
 .lightText {

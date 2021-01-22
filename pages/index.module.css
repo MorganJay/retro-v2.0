@@ -43,6 +43,7 @@
 }
 
 .yearLogo {
+  width: 80%;
   margin: 0 auto;
 }
 
@@ -53,12 +54,22 @@
     width: 410px;
     margin: 1rem auto;  
   }
+
+  .homepage {
+    width: 70%;
+    margin: 0 auto;
+  }
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 768px) {
+  .homepage {
+    width: 100%;
+  }
+
   .yearLogo[src] {
     content: url("/images/2020.svg");
-    margin: 0 auto;
+    width: 85%;
+    margin: auto;
   }
 
   .cta {
@@ -83,10 +94,6 @@
     margin-bottom: 0.9rem;
   }
 
-  .homepage {
-    text-align: center;
-  }
-
   .caption {
     margin-top: 2rem;
     font-size: 25px;
@@ -100,6 +107,7 @@
 
   .title {
     margin-bottom: 2rem;
+    font-size: 2rem;
   }
 
   .cta {
