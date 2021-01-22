@@ -16,6 +16,13 @@ export async function getStaticProps() {
     }
 }
 
+function handleClick(e) {
+  e.preventDefault();
+  const storiesList = document.getElementById("js-list");
+  storiesList.classList.add(`${utilStyles.openStories}`);
+  e.target.style.display = "none";
+}
+
 export default function Home({ allPostsData }) {
     return (
         <Layout home>

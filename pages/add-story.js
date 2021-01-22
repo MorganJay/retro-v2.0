@@ -37,8 +37,7 @@ const Add = () => {
     const handleChange = (e) => {
         setContact({ ...contact, [e.target.name]: e.target.value });
     }
-
-
+    
     const handleSubmit = async e => {
         e.preventDefault();
         try {
@@ -125,7 +124,6 @@ const Add = () => {
                             />
                         </div>
                     </div>
-
                      <div className={`${Styles.field} ${Styles.imageField}`}>               
                             {/* <input
                                 className={Styles.fileUpload}
