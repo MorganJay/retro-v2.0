@@ -1,0 +1,44 @@
+.columnContent{
+    animation: fadeIn ease 4s;
+    animation-fill-mode: forwards; 
+}
+
+@keyframes fadeIn{ 
+    0% { 
+        opacity: 0; 
+    } 
+    100% { 
+        opacity: 1; 
+     } 
+} 
+.heading{
+    font-family: Canela;
+    font-weight: normal;
+    font-size: 36px;
+    color: #FFFFFF;
+    width: 306px;
+}
+
+.field{
+
+}
+
+.input{
+
+}
+
+.storyInput{
+    background-color: antiquewhite;
+}
+
+@media screen and (min-width: 500px) {
+  
+}
+
+@media screen and (min-width: 800px) {
+ 
+}
+
+@media screen and (min-width: 1440px) {
+  
+}
