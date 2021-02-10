@@ -21,12 +21,14 @@
 }
 
 .backToHome {
-    margin: 3rem 0 0;
+    margin: 3rem 0;
 }
 
 .main {
-    width: 85%;
-    margin: 4rem auto;
+    width: 80%;
+    margin: 7rem auto 4rem;
+    color: #fefefe;
+    font-family: TTNormsPro;
 }
 
 @media screen and (min-width: 500px) {
@@ -35,15 +37,16 @@
     }
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 768px) {
     .main {
         width: 75%;
-        margin-top: 6rem;
+        margin: 8rem auto 4rem;
     }
 }
 
 @media screen and (min-width: 1440px) {
     .main {
-        width: 85%;
+        width: 75%;
+        margin: 10rem auto 4rem;
     }
 }

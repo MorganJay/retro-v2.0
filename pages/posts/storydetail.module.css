@@ -1,0 +1,118 @@
+.articleContainer {
+    margin-top: 2rem;
+}
+
+.storyHeading {
+    font-size: 48px;
+    font-family: Canela;
+    font-weight: 400;
+}
+
+.storyArticle {
+    margin: 2.5rem 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.authorImage {
+    object-fit: cover;
+    height: 60vh;
+    border-radius: 4px;
+}
+
+.gradient {
+    position: relative;
+}
+
+.gradient::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, transparent 0%, rgb(0, 0, 0) 100%);
+}
+
+.authorName {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+}
+
+.share {
+    padding: 8px 15px;
+    border: 1px solid #ffffff;
+    background-color: transparent;
+    color: #ffffff;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.shareModal {
+    font-size: 20px;
+    padding-bottom: 1rem;
+    font-weight: 100;
+    text-align: center;
+}
+
+.story {
+    margin-top: 3rem;
+    line-height: 28px;
+    font-size: 16px;
+}
+
+.story > p {
+    padding-bottom: 2rem;
+}
+
+.story > p:last-child {
+    padding-bottom: 0;
+}
+
+.more {
+    display: inline-block;
+    margin-top: 2rem;
+    padding: 10px 20px;
+    border: 1px solid #ffffff;
+    background-color: transparent;
+    color: #ffffff;
+    font-size: 16px;
+}
+
+@media screen and (min-width: 768px) {
+    .article {
+        display: grid;
+        grid-template-columns: 1.5fr 2fr;
+        grid-column-gap: 5rem;
+    }
+
+    .authorName {
+        font-size: 15px;
+    }
+    
+    .share {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+
+    .shareModal {
+        font-size: 28px;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .storyHeading {
+        font-size: 64px;
+    }
+
+    .authorName {
+        font-size: 16px;
+    }
+
+    .shareModal {
+        font-size: 36px;
+    }
+}
